@@ -3,8 +3,8 @@ import Image from "next/image";
 import { useState } from "react";
 
 
-const ImageBox = ({ imagePrompt, onSelectImage }) => {
-  const [aspectRatio, setAspectRatio] = useState("9:16");
+const ImageBox = ({ imagePrompt, onSelectImage, aspectRatio, setAspectRatio}) => {
+  
   const [images, setImages] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [loading, setLoading] = useState(false);

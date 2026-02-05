@@ -2,7 +2,7 @@
 import { useState } from "react";
 // import fs from "fs/promises";
 
-const VideoBox = ({ image, prompt, script }) => {
+const VideoBox = ({ image, prompt, script, aspectRatio }) => {
   const [loading, setLoading] = useState(false);
 
   async function handleGenerateVideo() {
@@ -36,6 +36,7 @@ const VideoBox = ({ image, prompt, script }) => {
           imageBytes,
           prompt,
           script,
+          aspectRatio
         }),
       });
 

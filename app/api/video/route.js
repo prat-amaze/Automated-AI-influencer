@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(req) {
   try {
-    let { imageBytes, prompt, script } = await req.json();
+    let { imageBytes, prompt, script, aspectRatio } = await req.json();
     const fullPrompt = `${prompt}\n${script}`;
     // console.log(fullPrompt)
 
@@ -23,6 +23,7 @@ export async function POST(req) {
         mimeType: "image/png",
       },
       config: {
+        aspectRatio: aspectRatio,
         sampleCount: 1, 
       }
     });

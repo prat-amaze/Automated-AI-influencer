@@ -16,7 +16,7 @@ export default function PromptForm({ formData, setFormData }) {
           value={formData.subject || ""}
           onChange={handleChange}
           maxLength={200}
-          placeholder="Example: a humanoid golden retriever woman, a red apple, a cigarette"
+          placeholder="Example: a guy in band, a Chocolate chip cookie, a red apple"
           className="mt-2 w-full rounded-xl border border-yellow-500/20 bg-black px-4 py-3 text-white placeholder:text-gray-500"
         />
       </div>

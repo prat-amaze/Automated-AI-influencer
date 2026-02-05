@@ -24,6 +24,7 @@ export default function Home() {
   } = usePromptGenerator();
 
   const [selectedImage, setSelectedImage] = useState(null);
+  const [aspectRatio, setAspectRatio] = useState("9:16");
 
   return (
     <div>
@@ -72,6 +73,8 @@ export default function Home() {
               <ImageBox
                 imagePrompt={output.image_prompt}
                 onSelectImage={setSelectedImage}
+                setAspectRatio= {setAspectRatio}
+                aspectRatio={aspectRatio}
               />
             )}
 
@@ -80,6 +83,7 @@ export default function Home() {
                 image={selectedImage}
                 prompt={output.image_prompt}
                 script={output.script}
+                aspectRatio= {aspectRatio}
               />
             )}
           </div>
